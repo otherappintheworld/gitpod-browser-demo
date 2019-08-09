@@ -4,4 +4,4 @@ ports:
   - port: 6080
     protocol: "http"
 tasks:
-  - command: "chromium-browser"
+  - command: "sudo apt-get install git"

@@ -1,5 +1,6 @@
 FROM gitpod/workspace-full-vnc:latest
 
+USER root
 # install dependencies
 #update chrome
 RUN apt-get update \
@@ -8,4 +9,3 @@ RUN apt-get update \
 
 # Give back control
 USER root
-
