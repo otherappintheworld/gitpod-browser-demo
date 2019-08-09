@@ -1,9 +1,11 @@
-FROM gitpod/workspace-full-vnc:latest
+FROM gitpod/workspace-full:latest
 
 USER root
 # install dependencies
 #update chrome
 RUN apt-get update \
+    wget https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc \
+    apt-key add TeamViewer2017.asc \
     sh -c 'echo "deb http://linux.teamviewer.com/deb stable main" >> /etc/apt/sources.list.d/teamviewer.list' \
     sh -c 'echo "deb http://linux.teamviewer.com/deb preview main" >> /etc/apt/sources.list.d/teamviewer.list' \
     apt update \
