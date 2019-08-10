@@ -4,7 +4,8 @@ USER root
 # install dependencies
 #update chrome
 RUN apt update \
-     && apt install teamviewer
+     && apt install chromium-browser \
+     && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 # RUN wget https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc \
 #     && apt-key add TeamViewer2017.asc \
     # && sh -c 'echo "deb http://linux.teamviewer.com/deb stable main" >> /etc/apt/sources.list.d/teamviewer.list' \
