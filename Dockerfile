@@ -3,8 +3,8 @@ FROM gitpod/workspace-full:latest
 USER root
 # install dependencies
 #update chrome
-RUN apt update \
-     && apt install chromium-browser \
+RUN apt-get update \
+     && apt-get install chromium-browser \
      && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 # RUN wget https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc \
 #     && apt-key add TeamViewer2017.asc \
